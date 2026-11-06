@@ -27,6 +27,7 @@ public class RoomController {
     @GetMapping("/{id}")
     public Room getRoom(@PathVariable Long id) {
 
+
         return roomRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND, "Room not found"));
